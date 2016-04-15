@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>DevRes/bardown.png</file>
+        <file>DevRes/barErr.png</file>
+        <file>DevRes/barLock.png</file>
+        <file>DevRes/barup.png</file>
+        <file>DevRes/Canopy_Err.png</file>
+        <file>DevRes/Canopy_G.png</file>
+        <file>DevRes/car.png</file>
+        <file>DevRes/CardBox.png</file>
+        <file>DevRes/CardBoxErr.png</file>
+        <file>DevRes/FD.png</file>
+        <file>DevRes/FD_Err.png</file>
+        <file>DevRes/Ganop_R.png</file>
+        <file>DevRes/Loop.png</file>
+        <file>DevRes/LoopCar.png</file>
+        <file>DevRes/LoopErr.png</file>
+        <file>DevRes/Net.png</file>
+        <file>DevRes/NetErr.png</file>
+        <file>DevRes/Print.png</file>
+        <file>DevRes/PrintErr.png</file>
+        <file>DevRes/Reader.png</file>
+        <file>DevRes/ReaderErr.png</file>
+        <file>DevRes/RSUERR.png</file>
+        <file>DevRes/RSUOK.png</file>
+        <file>DevRes/TranErr.png</file>
+        <file>DevRes/TranGreen.png</file>
+        <file>DevRes/TranRed.png</file>
+        <file>DevRes/未知.png</file>
+    </qresource>
+</RCC>
