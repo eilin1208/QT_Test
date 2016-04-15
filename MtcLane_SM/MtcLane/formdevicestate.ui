@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormDeviceState</class>
+ <widget class="QWidget" name="FormDeviceState">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>478</width>
+    <height>77</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="spacing">
+    <number>5</number>
+   </property>
+   <property name="margin">
+    <number>2</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="lbCardReader">
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/image/Reader.png);
+     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #353B43, stop:1 #151A20);
+     color: white;
+     padding-left: 4px;
+     border: 1px solid #447684;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lbCanLight">
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/image/nopass.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lbExists">
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/image/circle0.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lbPassCarsNum">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 170, 0);
+font:bold 48pt &quot;Times New Roman&quot;;
+     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #353B43, stop:1 #151A20);
+     color: white;
+     padding-left: 4px;
+     border: 1px solid #447684;</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lbCross">
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/image/circle0.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lbLaneLight">
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/image/TranRed.png);
+     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #353B43, stop:1 #151A20);
+     color: white;
+     padding-left: 4px;
+     border: 1px solid #447684;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lbBar">
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/image/sss.png);
+     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #353B43, stop:1 #151A20);
+     color: white;
+     padding-left: 4px;
+     border: 1px solid #447684;
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lbPrinter">
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/image/Printer.png);
+     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #353B43, stop:1 #151A20);
+     color: white;
+     padding-left: 4px;
+     border: 1px solid #447684;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/bmp">
+        <file>big0.jpg</file>
+        <file>big1.jpg</file>
+        <file>big2.jpg</file>
+        <file>big3.jpg</file>
+        <file>big4.jpg</file>
+        <file>Img0.bmp</file>
+        <file>Img1.bmp</file>
+        <file>Img2.bmp</file>
+        <file>small0.jpg</file>
+        <file>small1.jpg</file>
+        <file>small2.jpg</file>
+        <file>small3.jpg</file>
+        <file>small4.jpg</file>
+    </qresource>
+</RCC>

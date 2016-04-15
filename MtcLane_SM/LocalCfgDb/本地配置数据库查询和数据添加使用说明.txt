@@ -1,0 +1,5 @@
+﻿需要调用以下文件：
+1.CommonModule
+2.log4qt
+3.MD5Module
+4.LogModule

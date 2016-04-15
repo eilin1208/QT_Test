@@ -1,0 +1,119 @@
+#containerTitle
+{
+        font: bold 20pt "宋体";
+}
+
+#containerContent
+{
+	max-height:350px;
+}
+
+#containerContent *
+{
+    font: bold 15pt "宋体";
+}
+
+#containerBottom
+{
+        color: red;
+        font: 75 13pt "宋体";
+        text-decoration: underline;
+}
+*[styleType=container]
+{
+border:2px solid;
+border-color: rgb(0, 85, 255);
+border-radius:10px;
+color: rgb(255, 0, 0);
+}
+/*标题栏-----------------------start-------------------------------*/
+#FormMTCTitle
+{
+        min-width:1024px;
+		max-height:100px;
+}
+/*收费站名称*/
+#lbTollStationName
+{
+        font: bold 24pt "Times New Roman";
+}
+/*车道号名称*/
+#lbLaneNumber
+{
+        font: bold 12pt "Times New Roman";
+
+}
+/*车道基本信息container*/
+#baseInfoWidget
+{
+        min-height:40px;
+        background-color: rgb(0, 0, 0);
+}
+/*车道基本信息*/
+#baseInfoWidget QLabel
+{
+        font: bold 9pt "Times New Roman";
+        color: rgb(255, 255, 255);
+}
+/*带下划线QLabel*/
+QLabel[styleType="underline"]
+{
+        border:none;
+border-bottom: 2px solid;
+border-bottom-color: rgb(255, 255, 255);
+margin-bottom:8px;
+}
+/*标题栏------------------------end----------------------------------*/
+/*右抓拍------------------------start--------------------------------*/
+QWidget[styleType="border"]
+{
+border:8px solid;
+border-top-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0.0903955 rgba(2, 136, 242, 255), stop:0.977401 rgba(84, 170, 245, 124));
+border-bottom-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0.0903955 rgba(2, 136, 242, 255), stop:0.977401 rgba(84, 170, 245, 124));
+border-left-color: qlineargradient(spread:pad, x1:1, y1:0, x2:0, y2:0, stop:0.0903955 rgba(2, 136, 242, 255), stop:0.977401 rgba(84, 170, 245, 124));
+border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0903955 rgba(2, 136, 242, 255), stop:0.977401 rgba(84, 170, 245, 124));
+}
+/*右抓拍------------------------end----------------------------------*/
+/*左提示------------------------start--------------------------------*/
+#FormWarning QLabel
+{
+        border:2px solid;
+        border-color: rgb(0, 85, 255);
+        border-radius:10px;
+        color: rgb(255, 0, 0);
+        max-height:100px;
+}
+/*左提示------------------------end----------------------------------*/
+/*底部状态栏--------------------start--------------------------------*/
+#FormBottomBar{
+border-image: url(image/状态栏.png);
+}
+#FormBottomBar QLabel
+{
+        font:bold 9pt "Times New Roman"
+}
+
+/*底部状态栏--------------------end----------------------------------*/
+/*左复用车牌--------------------start--------------------------------*/
+#FormEnterVehInfo #containerContent *
+{
+    font: bold 18pt "AR PL UMing CN";
+}
+#FormEnterVehInfo QLabel[styleType=enter]
+{
+    border:none;
+    border-bottom: 2px solid;
+    border-bottom-color: rgb(0,0,0);
+    margin-bottom:25px;
+
+}
+#FormEnterVehInfo QLabel[styleType=title]
+{
+    margin-left:20pt;
+}
+#FormEnterVehInfo *[styleType=plate]
+{
+    background-color: rgb(0, 0, 255);
+    color: rgb(255, 255, 255);
+}
+/*左复用车牌--------------------end----------------------------------*/

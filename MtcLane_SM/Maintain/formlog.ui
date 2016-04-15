@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormLog</class>
+ <widget class="QWidget" name="FormLog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>651</width>
+    <height>445</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>日志查看</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" columnstretch="2,1,1,1">
+   <property name="sizeConstraint">
+    <enum>QLayout::SetDefaultConstraint</enum>
+   </property>
+   <item row="0" column="0" rowspan="5">
+    <widget class="QTreeWidget" name="treeWidget_log">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="autoExpandDelay">
+      <number>0</number>
+     </property>
+     <column>
+      <property name="text">
+       <string>日志名称</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>日志描述</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>日志大小</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>修改时间</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="0" column="1" colspan="2">
+    <widget class="QLineEdit" name="lineEdit_searchStr"/>
+   </item>
+   <item row="1" column="1" colspan="3">
+    <widget class="QTextEdit" name="textEdit_log"/>
+   </item>
+   <item row="2" column="1" colspan="3">
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLabel" name="label_warings">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1" colspan="3">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="QToolButton" name="pushButton_Search">
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>搜索</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

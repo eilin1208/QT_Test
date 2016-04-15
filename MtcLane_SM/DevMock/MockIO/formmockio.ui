@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormMockIO</class>
+ <widget class="QWidget" name="FormMockIO">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>337</width>
+    <height>309</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>数字IO信号模拟</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" rowspan="7">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QCheckBox" name="DI_LoopTrig1">
+       <property name="text">
+        <string>触发线圈1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="DI_LoopTrig2">
+       <property name="text">
+        <string>触发线圈2</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="DI_LoopFront">
+       <property name="text">
+        <string>存在线圈</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="DI_LoopBack">
+       <property name="text">
+        <string>通过线圈</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="DI_BarrierDown">
+       <property name="text">
+        <string>落杆到位</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="DI_BarrierUp">
+       <property name="text">
+        <string>抬杆到位</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="DI_AlarmDetector">
+       <property name="text">
+        <string>脚踏报警</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="1">
+    <widget class="QCheckBox" name="DO_CanopyLightGreen">
+     <property name="text">
+      <string>雨棚绿灯</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QCheckBox" name="DO_CanopyLightRed">
+     <property name="text">
+      <string>雨棚红灯</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QCheckBox" name="DO_PassLightGreen">
+     <property name="text">
+      <string>通行绿灯</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QCheckBox" name="DO_PassLightRed">
+     <property name="text">
+      <string>通行红灯</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QCheckBox" name="DO_BarrierDown">
+     <property name="text">
+      <string>落杆</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QCheckBox" name="DO_BarrierUp">
+     <property name="text">
+      <string>抬杆</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QCheckBox" name="DO_AlarmLight">
+     <property name="text">
+      <string>黄闪报警</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QCheckBox" name="DO_AlarmSound">
+     <property name="text">
+      <string>声音报警</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

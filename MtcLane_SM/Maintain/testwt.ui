@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TestWt</class>
+ <widget class="QWidget" name="TestWt">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>608</width>
+    <height>282</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>52</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="3">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>135</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="6">
+    <spacer name="horizontalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>51</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0" colspan="7">
+    <widget class="QTableWidget" name="tableWidget_wt">
+     <column>
+      <property name="text">
+       <string>车序号</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>轴数</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>限载</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>总重</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>超限率</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>速度</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>状态</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="7">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="7">
+    <widget class="QLabel" name="label_message">
+     <property name="text">
+      <string>显示信息</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="7">
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QToolButton" name="pushButton_init">
+     <property name="minimumSize">
+      <size>
+       <width>90</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>打开设备</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QToolButton" name="pushButton_close">
+     <property name="minimumSize">
+      <size>
+       <width>90</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>关闭设备</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <widget class="QToolButton" name="pushButton_clearWtInfo">
+     <property name="minimumSize">
+      <size>
+       <width>90</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>清空计重信息</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="5">
+    <widget class="QToolButton" name="pushButton">
+     <property name="minimumSize">
+      <size>
+       <width>90</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>删除计重信息</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

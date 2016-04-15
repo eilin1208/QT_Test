@@ -1,0 +1,49 @@
+﻿1.本模块依赖于log4qt，在使用本模块之前请确保将log4qt的pri文件引入到了项目的pro文件中
+
+include(log4qt的pri文件路径)
+
+2.引入本模块pri文件
+
+include(qfilelogger.pri文件路径)
+
+3.函数说明
+
+static void AddFileLogger(const QString& sFileName);
+
+功能：添加一个名为sFileName的日志文件记录日志。
+参数：sFileName：日志文件名称(不包含后缀名)
+示例一：
+
+QFileLogger::AddFileLogger("lane");
+这样会生成一个lane.log文件
+
+static void WriteLog(const QString & title, const QString & content, LOG_LEVEL level=LOG_INFO);
+
+功能：记录日志
+参数：title：要写入得日志文件名称(不包含后缀名)； content：日志内容；level：日志等级
+示例一：
+
+QFileLogger::WriteLog("lane", "no file exists……", QFileLogger::LOG_ERROR);
+
+示例二：
+QFileLogger::WriteLog("lane", QObject::tr("%1 can't be openned……").arg(sFileName));
+
+以上两个函数都会向lane.log文件中添加日志。
+
+4.日志等级枚举说明
+
+该枚举定义如下：
+emun LOG_LEVEL
+{
+	LOG_ERROR,
+        LOG_INFO,
+        LOG_DEBUG,
+        LOG_WARN
+};
+
+日志等级总共分为四种，分别为LOG_ERROR（错误），LOG_INFO（信息），LOG_DEBUG（调试），LOG_WARN（警告）
+其中日志记录函数的默认等级为LOG_INFO（信息）。
+
+5.log4j.properties文件已经不再使用，日志配置将会通过程序动态配置。
+
+--modified by xiangkai at 2011-11-14 16:59:20

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormServer</class>
+ <widget class="QWidget" name="FormServer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>477</width>
+    <height>390</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TcpServer</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>显示连接信息</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>显示费显信息</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QTextEdit" name="text_net"/>
+   </item>
+   <item row="1" column="1">
+    <widget class="QTextEdit" name="textEdit_fd"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>显示IO信息</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>显示打印信息</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QTextEdit" name="text_io"/>
+   </item>
+   <item row="3" column="1">
+    <widget class="QTextEdit" name="textEdit_prt"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>显示Vpr信息</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QTextEdit" name="text_vpr"/>
+   </item>
+   <item row="6" column="1">
+    <widget class="QTextEdit" name="textEdit_wt"/>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>显示计重信息</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

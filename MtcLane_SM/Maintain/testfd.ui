@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TestFD</class>
+ <widget class="QWidget" name="TestFD">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>612</width>
+    <height>406</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="3" colspan="2">
+    <widget class="QToolButton" name="pushButton_openDev">
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>打开设备</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="6" colspan="2">
+    <widget class="QToolButton" name="pushButton_closeDev">
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>关闭设备</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>车型：</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2" colspan="3">
+    <widget class="QComboBox" name="comboBox_vheClass">
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>11</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>12</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>13</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>14</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>15</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="5">
+    <widget class="QToolButton" name="pushButton_vehClass">
+     <property name="minimumSize">
+      <size>
+       <width>80</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>车型</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="6" colspan="3">
+    <widget class="QLineEdit" name="lineEdit_text">
+     <property name="text">
+      <string>祝一路平安！</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="9">
+    <widget class="QToolButton" name="pushButton_Text">
+     <property name="minimumSize">
+      <size>
+       <width>80</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>文字信息</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>应收：</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2" colspan="3">
+    <widget class="QLineEdit" name="lineEdit_fare">
+     <property name="text">
+      <string>12</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="5">
+    <widget class="QToolButton" name="pushButton_Fare">
+     <property name="minimumSize">
+      <size>
+       <width>80</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>应收</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="6" colspan="3">
+    <widget class="QLineEdit" name="lineEdit_before">
+     <property name="text">
+      <string>24</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="9">
+    <widget class="QToolButton" name="pushButton_Before">
+     <property name="minimumSize">
+      <size>
+       <width>80</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>扣款前金额</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>实收：</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2" colspan="3">
+    <widget class="QLineEdit" name="lineEdit_fared">
+     <property name="text">
+      <string>12</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="5">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>余额：</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="6" colspan="3">
+    <widget class="QLineEdit" name="lineEdit_after">
+     <property name="text">
+      <string>12</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="9">
+    <widget class="QToolButton" name="pushButton_After">
+     <property name="minimumSize">
+      <size>
+       <width>80</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>扣款后金额</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>总重：</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2" colspan="2">
+    <widget class="QLineEdit" name="lineEdit_totalwt">
+     <property name="text">
+      <string>34</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="4">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>限载：</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="5">
+    <widget class="QComboBox" name="comboBox_limitw">
+     <item>
+      <property name="text">
+       <string>17</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>25</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>35</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>43</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>49</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="6">
+    <widget class="QLabel" name="label_7">
+     <property name="text">
+      <string>超限率：</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="7" colspan="2">
+    <widget class="QLineEdit" name="lineEdit_overrate">
+     <property name="text">
+      <string>100</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="9">
+    <widget class="QToolButton" name="pushButton_Weight">
+     <property name="minimumSize">
+      <size>
+       <width>80</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>计重信息</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="QLabel" name="label_8">
+     <property name="text">
+      <string>入口站：</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2" colspan="3">
+    <widget class="QLineEdit" name="lineEdit_EnStation">
+     <property name="text">
+      <string>草铺</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="5">
+    <widget class="QToolButton" name="pushButton_EnStation">
+     <property name="minimumSize">
+      <size>
+       <width>80</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>入口</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="7">
+    <widget class="QToolButton" name="pushButton_ClearAll">
+     <property name="minimumSize">
+      <size>
+       <width>80</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>清屏</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="8">
+    <widget class="QToolButton" name="pushButton_StarAlarm">
+     <property name="minimumSize">
+      <size>
+       <width>80</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>启动报警</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="9">
+    <widget class="QToolButton" name="pushButton_EndAlarm">
+     <property name="minimumSize">
+      <size>
+       <width>80</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>关闭报警</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="10">
+    <widget class="QTextEdit" name="textEdit"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

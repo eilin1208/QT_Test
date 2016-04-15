@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>610</width>
+    <height>438</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>计重设备测试</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="2">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>136</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="2" colspan="3">
+    <widget class="QPushButton" name="pushButton_init">
+     <property name="text">
+      <string>打开设备</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="5" colspan="3">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>130</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="8" colspan="2">
+    <widget class="QPushButton" name="pushButton_close">
+     <property name="text">
+      <string>关闭设备</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="10" colspan="2">
+    <spacer name="horizontalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>137</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0">
+    <spacer name="horizontalSpacer_4">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>47</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="1" colspan="2">
+    <widget class="QPushButton" name="pushButton_splitWt">
+     <property name="text">
+      <string>拆分计重信息</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <spacer name="horizontalSpacer_5">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>60</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="4" colspan="2">
+    <widget class="QPushButton" name="pushButton_MergeWt">
+     <property name="text">
+      <string>合并计重信息</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="6">
+    <spacer name="horizontalSpacer_6">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>44</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="7" colspan="2">
+    <widget class="QPushButton" name="pushButton_ClearOne">
+     <property name="text">
+      <string>删除计重信息</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="9">
+    <spacer name="horizontalSpacer_8">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>66</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="10">
+    <widget class="QPushButton" name="pushButton_ClearAll">
+     <property name="text">
+      <string>清空列表</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="11">
+    <spacer name="horizontalSpacer_7">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="0" colspan="11">
+    <widget class="QTableWidget" name="tableWidget_wt">
+     <column>
+      <property name="text">
+       <string>车序号</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>轴数</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>限载</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>总重</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>超限率</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>速度</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>状态</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="12">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_message">
+     <property name="text">
+      <string>显示信息</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="12">
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

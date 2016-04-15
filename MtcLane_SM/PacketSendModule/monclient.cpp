@@ -1,0 +1,263 @@
+﻿#include "monclient.h"
+#include "CommonModule/ilogmsg.h"
+MonClient::MonClient(QObject *parent) :
+    QPausableThread(parent), m_socket(NULL)
+{
+    setObjectName("MonClientThread");
+    m_responseInfo.clear();
+    m_bCanceled = false;
+    m_nLaneId = 0;
+    m_nStaId = 0;
+    m_sIp = "";
+    m_nPort = 0;
+    m_data.clear();
+    qRegisterMetaType<THKResultInfo>("THKResultInfo");
+}
+
+MonClient::~MonClient()
+{
+    LogMsg("lane",tr("release mon client thread..."));
+}
+
+void MonClient::BeginSendData(const TMonData &AData)
+{
+    int nRet = -1;
+    if(m_socket->isConnected())
+    {
+        nRet = m_socket->WriteData((char*)AData.pBuf, AData.ASize);
+    }
+    if(nRet == -1)
+    {
+        LogMsg("net", tr("[TMonClient.BeginSendData]异常,原因:%1").arg(m_socket->GetLastError()));
+        if(AData.NeedHK)
+        {
+            InitResponseInfo(m_responseInfo);
+            emit OnHKResponse(m_responseInfo);
+        }
+        return;
+    }
+    qDebug() << "need hk" << AData.NeedHK;
+    if(AData.NeedHK)
+    {
+        WaitHKResponse();
+    }
+}
+
+bool MonClient::KeepConnect()
+{
+    TMsgLaneBasicInfo msg;
+    QString sTmp;
+    if(CheckConnection())
+    {
+        return true;
+    }
+    LogMsg("net", tr("[TMonClient.KeepConnect]连接是断开的,尝试重连..."));
+    bool bRet = m_socket->ConnectToserver(m_sIp, m_nPort, CONNECT_TIME);
+    if(!bRet)
+    {
+        LogMsg("net", tr("[TMonClient.KeepConnect]连接失败,原因:%1").arg(m_socket->GetLastError()));
+        return false;
+    }
+    memcpy(msg.LaneID, tr("%1").arg(m_nLaneId,3, 10, QLatin1Char('0')).toLocal8Bit().data(),3);
+    memcpy(msg.StationID, tr("%1").arg(m_nStaId, 6,10, QLatin1Char('0')).toLocal8Bit().data(),6);
+    int nRet = m_socket->WriteData((char*)&msg, sizeof(msg));
+    if(nRet == -1)
+    {
+        LogMsg("net", tr("[TMonClient.KeepConnect]连接失败,原因:%1").arg(m_socket->GetLastError()));
+        return false;
+    }
+    LogMsg("net", tr("[TMonClient.KeepConnect]重连成功"));
+    return true;
+}
+
+TMonData *MonClient::PopData()
+{
+    TMonData* tmpData = NULL;
+
+    QMutexLocker locker(&m_mutex);
+    if(m_data.count() > 0)
+    {
+        tmpData = m_data.dequeue();
+    }
+    else
+    {
+        tmpData = NULL;
+    }
+    return tmpData;
+}
+
+void MonClient::CancelHK()
+{
+    m_bCanceled = true;
+}
+
+void MonClient::WriteServerIP(const QString &Value)
+{
+    m_sIp = Value;
+}
+
+void MonClient::WriteServerPort(const quint16 Value)
+{
+    m_nPort = Value;
+}
+
+void MonClient::RunOnce()
+{
+    LogMsg("mon", "monclient运行一次");
+    bool bRet = KeepConnect();
+    LogMsg("mon", tr("monclient检测连接完成%1").arg(m_data.size()));
+
+    while(m_data.size() > 0)
+    {
+        TMonData* p = PopData();
+
+        if(p != NULL)
+        {
+            LogMsg("lane",tr("[TMonClient.Execute]释放数据..."));
+
+            if(bRet)
+            {
+                BeginSendData(*p);
+
+            }
+            else
+            {
+                if(p->NeedHK)
+                {
+                    InitResponseInfo(m_responseInfo);
+                    emit OnHKResponse(m_responseInfo);
+                }
+            }
+            delete [] p->pBuf;
+            delete p;
+            LogMsg("net",tr("[MonClient::SendData]执行delete pPackData"));
+        }
+        else
+        {
+            LogMsg("mon", "出现异常数据");
+        }
+    }
+    //如果没有需要发送的数据，则暂停线程
+    Pause();
+    LogMsg("lane",tr("mon client run once finish"));
+}
+
+bool MonClient::CheckConnection()
+{
+    if(m_socket == NULL)
+    {
+        m_socket = new QLaneSocket();
+    }
+    return m_socket->isConnected();
+}
+
+void MonClient::InitResponseInfo(THKResultInfo &ResponseInfo)
+{
+    ResponseInfo.Response = hrFail;
+    ResponseInfo.AuthID = "";
+    ResponseInfo.AuthName  ="";
+}
+
+void MonClient::WaitHKResponse()
+{
+    TMsgResponseInfo response;
+    m_bCanceled = false;
+    InitResponseInfo(m_responseInfo);
+    while(true)
+    {
+        if(m_bCanceled == true)
+        {
+            m_socket->Close();
+            return;
+        }
+        if(TryReadBuffer((char*)&response, sizeof(response), 100))
+        {
+            m_responseInfo.Response = (THKResult)response.RecResult;
+            m_responseInfo.AuthID = response.AuthInfo.AuthID;
+            m_responseInfo.AuthName = response.AuthInfo.AuthName;
+            emit OnHKResponse(m_responseInfo);
+            break;
+        }
+    }
+}
+
+bool MonClient::TryReadBuffer(void *ABuffer, const int AByteCount, const int ATimeout)
+{
+    if(AByteCount > 0 && ABuffer != NULL)
+    {
+        LogMsg("lane", "monclient read data!");
+        int nRet = m_socket->ReadData((char*)ABuffer, AByteCount, ATimeout);
+        if(nRet == -1)
+        {
+            return false;
+        }
+        return true;
+    }
+    return false;
+}
+
+
+bool MonClient::PutData(char *ABuf, int ALen, bool NeedHK)
+{
+    bool bRet = false;
+    TMonData* pData = NULL;
+    QMutexLocker locker(&m_mutex);
+
+    pData = new TMonData;
+    pData->ATime = 0;
+    pData->NeedHK = NeedHK;
+    pData->pBuf = ABuf;
+    pData->ASize = ALen;
+    m_data.append(pData);
+    if(m_data.size() == 20)
+    {
+        pData = m_data.dequeue();
+        delete [] pData->pBuf;
+        delete pData;
+        LogMsg("mon", "监控网络出现问题，数据积压超过20条");
+    }
+    return true;
+}
+
+void MonClient::SendData(TMsgToSend &AData)
+{
+    int nLen = 0;
+    char* pPackData = NULL;
+    bool bNeedHk = false;
+    int nPackLen = AData.BasicInfo.msgHead.TotalLength;
+    if(0 == nPackLen)
+    {
+        return;
+    }
+    pPackData = new char[nPackLen];
+    LogMsg("net",tr("[MonClient::SendData]执行new pPackData"));
+    if(!getMsgSendFun()->PackMsg(&AData, pPackData, nLen))
+    {
+        delete [] pPackData;
+        LogMsg("net", tr("[TMonClient.SendData]报文打包失败"));
+        LogMsg("net",tr("[MonClient::SendData]执行delete pPackData"));
+        return;
+    }
+    LogMsg("net", tr("监控打包后报文长度=%1(%2)").arg(nLen).arg(AData.BasicInfo.msgHead.TotalLength));
+    bNeedHk = ((AData.BasicInfo.msgHead.cMsgID[0] == '2') && (AData.BasicInfo.msgHead.cMsgID[1] == '7'));
+    if(PutData(pPackData, nLen, bNeedHk))
+    {
+        Resume();
+    }
+    else
+    {
+        delete [] pPackData;
+        LogMsg("net",tr("[MonClient::SendData]执行delete pPackData"));
+        if(bNeedHk)
+        {
+            InitResponseInfo(m_responseInfo);
+            emit OnHKResponse(m_responseInfo);
+        }
+    }
+}
+MonClient* getMon()
+{
+    static MonClient mon;
+    return &mon;
+}
+

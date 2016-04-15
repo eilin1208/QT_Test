@@ -1,0 +1,262 @@
+#-------------------------------------------------
+#
+# Project created by QtCreator 2011-11-30T14:50:28
+#
+#-------------------------------------------------
+
+QT       += core gui network sql xml
+#unix: QT += dbus
+# The application version
+VERSION = 1.0.18
+
+# Define the preprocessor macro to get the application version in our application.
+DEFINES += APP_VERSION=\\\"$$VERSION\\\"
+
+TARGET = MtcLane
+TEMPLATE = app
+
+QMAKE_CXXFLAGS += -pg
+QMAKE_LFLAGS += -pg
+
+SOURCES += main.cpp\
+    formloadparam.cpp \
+    formcapture.cpp \
+    formwarning.cpp \
+    formrecordtable.cpp \
+    formdevicestate.cpp \
+    formcarqueue.cpp \
+    formbottombar.cpp \
+    formmainwindow.cpp \
+    formtablewidget.cpp \
+    formlogin.cpp \
+    formmessage.cpp \
+    formpasswordverify.cpp \
+    #errortransition.cpp \
+    #savefreqtransition.cpp \
+    #formmgr.cpp \
+    laneinfo.cpp \
+    formpublish.cpp \
+    formvpr.cpp \
+    formwtinfo.cpp \
+    statemachinemgr.cpp \
+    devicefactory.cpp \
+    datafilemgr.cpp \
+    forminformid.cpp \
+    #formvehqueprocess.cpp \
+    formpapercard.cpp \
+    statemachinetransition.cpp \
+    formvehquebegin.cpp \
+    formentryvehinfo.cpp \
+    formentryplate.cpp \
+    formpasscard.cpp \
+    formbadcard.cpp \
+    formcalchange.cpp \
+    vehqueuemgr.cpp \
+    tcpserver.cpp \
+    reqparam.cpp \
+    reqtime.cpp \
+    lanectrl.cpp \
+    formshowweight.cpp \
+    #formeditwt.cpp \
+    formauth.cpp \
+    cardinfoprocessor.cpp \
+    dialogshowproinfo.cpp \
+    formcardbox.cpp \
+    #formamendweight.cpp \
+    cardstatedetecter.cpp \
+    tollitem.cpp \
+    exittollitem.cpp \
+    entrytollitem.cpp \
+    shiftsum.cpp \
+    formfunction.cpp \
+    formmodifyweight.cpp \
+    formwtdetail.cpp \
+    entrycardinfoprocessor.cpp \
+    formentry.cpp \
+    formbase.cpp \
+    formexit.cpp \
+    formentryreverse.cpp \
+    formmtctitle.cpp \
+    formlog.cpp \
+    formcardmgr.cpp \
+    formautocard.cpp \
+    formautovehinfo.cpp \
+    formdevicetable.cpp \
+    formregulatetime.cpp \
+    #../new/debug_new.cpp
+
+HEADERS  += \
+    formloadparam.h \
+    formmtctitle.h \
+    formcapture.h \
+    formwarning.h \
+    formrecordtable.h \
+    formdevicestate.h \
+    formcarqueue.h \
+    formbottombar.h \
+    formmainwindow.h \
+    formtablewidget.h \
+    formlogin.h \
+    formmessage.h \
+    formpasswordverify.h \
+    #errortransition.h \
+    #savefreqtransition.h \
+    #formmgr.h \
+    laneinfo.h \
+    formpublish.h \
+    formvpr.h \
+    formwtinfo.h \
+    statemachinemgr.h \
+    devicefactory.h \
+    datafilemgr.h \
+    forminformid.h \
+    #formvehqueprocess.h \
+    formpapercard.h \
+    statemachinetransition.h \
+    formvehquebegin.h \
+    formentryvehinfo.h \
+    formentryplate.h \
+    formpasscard.h \
+    formbadcard.h \
+    formcalchange.h \
+    vehqueuemgr.h \
+    tcpserver.h \
+    reqparam.h \
+    reqtime.h \
+    lanectrl.h \
+    formshowweight.h \
+    #formeditwt.h \
+    formauth.h \
+    cardinfoprocessor.h \
+    dialogshowproinfo.h \
+    formcardbox.h \
+    #formamendweight.h \
+    cardstatedetecter.h \
+    tollitem.h \
+    exittollitem.h \
+    entrytollitem.h \
+    shiftsum.h \
+    formfunction.h \
+    formmodifyweight.h \
+    formwtdetail.h \
+    entrycardinfoprocessor.h \
+    formentry.h \
+    formbase.h \
+    formexit.h \
+    formentryreverse.h \
+    formlog.h \
+    formcardmgr.h \
+    formautocard.h \
+    formautovehinfo.h \
+    formdevicetable.h \
+    formregulatetime.h \
+    #../new/debug_new.h
+
+FORMS    += formloadparam.ui \
+    formmtctitle.ui \
+    formcapture.ui \
+    formwarning.ui \
+    formrecordtable.ui \
+    formdevicestate.ui \
+    formcarqueue.ui \
+    formbottombar.ui \
+    formmainwindow.ui \
+    formtablewidget.ui \
+    formlogin.ui \
+    formmessage.ui \
+    formpasswordverify.ui \
+    formpublish.ui \
+    formvpr.ui \
+    formwtinfo.ui \
+    formordinartprocess.ui \
+    forminformid.ui \
+    #formvehqueprocess.ui \
+    formpapercard.ui \
+    formvehquebegin.ui \
+    formentryvehinfo.ui \
+    formentryplate.ui \
+    formpasscard.ui \
+    formbadcard.ui \
+    formcalchange.ui \
+    formshowweight.ui \
+    #formamendweight.ui \
+    #formeditwt.ui \
+    formauth.ui \
+    dialogshowproinfo.ui \
+    formcardbox.ui \
+    formfunction.ui \
+    formmodifyweight.ui \
+    formwtdetail.ui \
+    formentryreverse.ui \
+    formlog.ui \
+    formcardmgr.ui \
+    formautovehinfo.ui \
+    formdevicetable.ui \
+    formregulatetime.ui
+
+include($$PWD/../MtcKey/MtcKey.pri)
+include($$PWD/../log4qt/log4qt.pri)
+include($$PWD/../DevModule/IoBoardArm/IoBoardArm.pri)
+include($$PWD/../DevModule/VideoCardArm/VideoCardArm.pri)
+include($$PWD/../DevModule/CardReaderArm/CardReaderArm.pri)
+include($$PWD/../DevModule/CardMgrArm/CardMgrArm.pri)
+include($$PWD/../DevModule/BaseInterface/DevBaseInterface.pri)
+include($$PWD/../LogModule/LogModule.pri)
+include($$PWD/../DevModule/VDMArm/VDMArm.pri)
+include($$PWD/../DevModule/VPRArm/VPRArm.pri)
+include($$PWD/../DevModule/FareDisplayArm/FareDisplayArm.pri)
+include($$PWD/../DevModule/PrinterArm/PrinterArm.pri)
+include($$PWD/../ParamModule/ParamModule.pri)
+include($$PWD/../PacketSendModule/PacketSendModule.pri)
+include($$PWD/../LocalCfgDb/LocalCfgDb.pri)
+include($$PWD/../FareCalc/FareCalc.pri)
+include($$PWD/../DevModule/WtArm/WtArm.pri)
+include($$PWD/../BakupModule/BakupModule.pri)
+include($$PWD/../ZLib/ZLib.pri)
+include($$PWD/../XMLBakup/XMLBakup.pri)
+include($$PWD/../SDDetector/SDDetector.pri)
+include($$PWD/../CommonModule/common.pri)
+
+RESOURCES += \
+    qssSource.qrc \
+    source.qrc
+DEFINES+=DEBUG YNLane
+
+unix {
+
+    linux-g++ {
+        message(the app will create in folder: /work/linux)
+        DESTDIR = /work/linux
+
+        MOC_DIR = linux/moc
+
+        RCC_DIR = linux/rcc
+
+        UI_DIR = linux/ui
+
+        OBJECTS_DIR = linux/obj
+    }
+
+    linux-EMRC-R3-g++ {
+        message(the app will create in folder: /work/arm)
+        DESTDIR = /work/arm
+
+        MOC_DIR = arm/moc
+
+        RCC_DIR = arm/rcc
+
+        UI_DIR = arm/ui
+
+        OBJECTS_DIR = arm/obj
+    }
+}
+
+
+
+
+
+
+
+
+
+

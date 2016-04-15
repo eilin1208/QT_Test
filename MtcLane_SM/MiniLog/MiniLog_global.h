@@ -1,0 +1,13 @@
+#ifndef MINILOG_GLOBAL_H
+#define MINILOG_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(MINILOG_LIBRARY)
+#  define MINILOGSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define MINILOGSHARED_EXPORT Q_DECL_IMPORT
+#endif
+#define LOGAPI extern "C" MINILOGSHARED_EXPORT
+
+#endif // MINILOG_GLOBAL_H

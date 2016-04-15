@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormAutoVehInfo</class>
+ <widget class="QWidget" name="FormAutoVehInfo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>车型:</string>
+     </property>
+     <property name="className" stdset="0">
+      <string>faviAll</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLabel" name="lbVehClass">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="styleType" stdset="0">
+      <string>underline</string>
+     </property>
+     <property name="className" stdset="0">
+      <string>faviAll</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>车牌:</string>
+     </property>
+     <property name="className" stdset="0">
+      <string>faviAll</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLabel" name="lbVehPlate">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="styleType" stdset="0">
+      <string>underline</string>
+     </property>
+     <property name="className" stdset="0">
+      <string>faviAll</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>车类:</string>
+     </property>
+     <property name="className" stdset="0">
+      <string>faviAll</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLabel" name="lbVehType">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="styleType" stdset="0">
+      <string>underline</string>
+     </property>
+     <property name="className" stdset="0">
+      <string>faviAll</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

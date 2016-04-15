@@ -1,0 +1,72 @@
+\hypertarget{class_card_mgr_decoder}{\section{Card\-Mgr\-Decoder Class Reference}
+\label{class_card_mgr_decoder}\index{Card\-Mgr\-Decoder@{Card\-Mgr\-Decoder}}
+}
+
+
+卡机协议数据解包器，用于将串口接收到的数据进行解析  
+
+
+
+
+{\ttfamily \#include $<$cardmgrdecoder.\-h$>$}
+
+Inheritance diagram for Card\-Mgr\-Decoder\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_card_mgr_decoder}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_card_mgr_decoder_a8d64fe1e714f0bc2c7be352d224f9206}{{\bfseries Card\-Mgr\-Decoder} (Q\-Object $\ast$parent=0)}\label{class_card_mgr_decoder_a8d64fe1e714f0bc2c7be352d224f9206}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_card_mgr_decoder_aabac70b6795845e74e8ba80fdd386a39}{Decode} (Q\-Byte\-Array \&data, int n\-Count, quint8 \&rsctl, C\-M\-F\-R\-A\-M\-E\-T\-Y\-P\-E \&card\-Type, int \&n\-Index, \hyperlink{struct_channel_info}{Channel\-Info} $\ast$arr\-Channels)
+\begin{DoxyCompactList}\small\item\em 解析串口数据 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+卡机协议数据解包器，用于将串口接收到的数据进行解析 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_card_mgr_decoder_aabac70b6795845e74e8ba80fdd386a39}{\index{Card\-Mgr\-Decoder@{Card\-Mgr\-Decoder}!Decode@{Decode}}
+\index{Decode@{Decode}!CardMgrDecoder@{Card\-Mgr\-Decoder}}
+\subsubsection[{Decode}]{\setlength{\rightskip}{0pt plus 5cm}bool Card\-Mgr\-Decoder\-::\-Decode (
+\begin{DoxyParamCaption}
+\item[{Q\-Byte\-Array \&}]{data, }
+\item[{int}]{n\-Count, }
+\item[{quint8 \&}]{rsctl, }
+\item[{C\-M\-F\-R\-A\-M\-E\-T\-Y\-P\-E \&}]{card\-Type, }
+\item[{int \&}]{n\-Index, }
+\item[{{\bf Channel\-Info} $\ast$}]{arr\-Channels}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_card_mgr_decoder_aabac70b6795845e74e8ba80fdd386a39}
+
+
+解析串口数据 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & 要解析的数据内容 \\
+\hline
+{\em card\-Type} & 解析后的的数据类型 \\
+\hline
+{\em n\-Count} & 频道总数 \\
+\hline
+{\em rsctl} & rsctl \\
+\hline
+{\em n\-Index} & 出口参数，返回此次信息所改变的频道编号，此编号使用二进制表示，int为32位，则可表示32个频道是否被改变， int的n位对应n频道，n位为1时说明被改变，n位为0时，说明无改变 \\
+\hline
+{\em arr\-Channels} & 解析信息后需要将解析的内容存放到此数组中 \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+cardmgrdecoder.\-h\item 
+cardmgrdecoder.\-cpp\end{DoxyCompactItemize}

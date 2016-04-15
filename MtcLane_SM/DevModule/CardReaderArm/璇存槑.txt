@@ -1,0 +1,9 @@
+﻿
+1.Liunx 下测试可运行打开读写器。单元测试正在写。
+2.libjkm.so为Liunx下的动态库
+/*------------------------------------Linux下测试代码--------------------------*/
+    QBaseCardReader reader;
+    qDebug() << reader.LoadDriver("./libjkm.so");
+    qDebug() << reader.OpenReader(5,"115200,n,8,1");
+    qDebug() << reader.CloseReader();
+/*-----------------------------------------------------------------------------*/

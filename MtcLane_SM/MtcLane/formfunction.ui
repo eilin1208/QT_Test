@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormFunction</class>
+ <widget class="QWidget" name="FormFunction">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="Type" stdset="0">
+   <string>firstWidget</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,8">
+   <item>
+    <widget class="QLabel" name="containerTitle">
+     <property name="styleSheet">
+      <string notr="true">font: bold 28pt &quot;Ubuntu&quot;;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="containerContent" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="labContent">
+        <property name="styleSheet">
+         <string notr="true">font: bold 26pt &quot;Ubuntu&quot;;</string>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

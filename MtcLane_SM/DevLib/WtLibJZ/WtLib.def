@@ -1,0 +1,18 @@
+LIBRARY WtLib
+
+EXPORTS
+WimDev_AxisCount1 = WimDev_AxisCount1@4
+WimDev_AxisCount=WimDev_AxisCount@4
+WimDev_AxisData1=WimDev_AxisData1@16
+WimDev_AxisData=WimDev_AxisData@16
+WimDev_AxisInfo=WimDev_AxisInfo@12
+WimDev_ClearOne=WimDev_ClearOne@0
+WimDev_ClearOneData=WimDev_ClearOneData@4
+WimDev_Data=WimDev_Data@20
+WimDev_GetCount=WimDev_GetCount@0
+WimDev_Init=WimDev_Init@4
+WimDev_SetCom=WimDev_SetCom@8
+WimDev_Synchro=WimDev_Synchro@0
+WimDev_Test=WimDev_Test@4
+
+
