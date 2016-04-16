@@ -5,7 +5,7 @@
 #include <QMovie>
 #include <QDebug>
 #include <QBuffer>
-//重新来过
+//重新来过11111111111111111111
 
 
 QHash<QString,Icon*> Icon::instances;
