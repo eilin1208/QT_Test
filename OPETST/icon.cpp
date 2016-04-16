@@ -5,7 +5,7 @@
 #include <QMovie>
 #include <QDebug>
 #include <QBuffer>
-
+//测试分支 dev 提交
 
 QHash<QString,Icon*> Icon::instances;
 
