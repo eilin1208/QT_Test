@@ -11,7 +11,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = OPETST
 TEMPLATE = app
 
-LIBS += -lsqlite3
+#LIBS += -lsqlite3
 
 INCLUDEPATH += $$PWD/include
 LIBS += -L$$PWD/lib
