@@ -5,7 +5,7 @@
 #include <QMovie>
 #include <QDebug>
 #include <QBuffer>
-//dfsadf2014
+
 
 QHash<QString,Icon*> Icon::instances;
 
