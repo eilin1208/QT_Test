@@ -14,6 +14,25 @@ class MdiWindow;
 class StatusField;
 class ThemeTuner;
 
+
+#ifdef Q_OS_MACX
+#define PREV_TASK_KEY_SEQ Qt::CTRL + Qt::ALT + Qt::Key_Left
+#define NEXT_TASK_KEY_SEQ Qt::CTRL + Qt::ALT + Qt::Key_Right
+#else
+#define PREV_TASK_KEY_SEQ Qt::CTRL + Qt::Key_PageUp
+#define NEXT_TASK_KEY_SEQ Qt::CTRL + Qt::Key_PageDown
+#endif
+
+CFG_KEY_LIST(MainWindow, QObject::tr("Main window"),
+     CFG_KEY_ENTRY(OPEN_SQL_EDITOR,    Qt::ALT + Qt::Key_E,         QObject::tr("Open SQL editor"))
+     CFG_KEY_ENTRY(PREV_TASK,          PREV_TASK_KEY_SEQ,           QObject::tr("Previous window"))
+     CFG_KEY_ENTRY(NEXT_TASK,          NEXT_TASK_KEY_SEQ,           QObject::tr("Next window"))
+     CFG_KEY_ENTRY(HIDE_STATUS_FIELD,  Qt::Key_Escape,              QObject::tr("Hide status area"))
+     CFG_KEY_ENTRY(OPEN_CONFIG,        Qt::Key_F2,                  QObject::tr("Open configuration dialog"))
+     CFG_KEY_ENTRY(OPEN_DEBUG_CONSOLE, Qt::Key_F12,                 QObject::tr("Open Debug Console"))
+     CFG_KEY_ENTRY(OPEN_CSS_CONSOLE,   Qt::Key_F11,                 QObject::tr("Open CSS Console"))
+)
+
 class MainWindow : public QMainWindow, public ExtActionContainer
 {
     Q_OBJECT

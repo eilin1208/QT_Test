@@ -17,7 +17,7 @@
 
 static const int sqlitestudioVersion = 10000;
 
-//CFG_KEYS_DEFINE(MainWindow)
+CFG_KEYS_DEFINE(MainWindow)
 MainWindow* MainWindow::instance = nullptr;
 
 MainWindow::MainWindow(/*QWidget *parent*/) :

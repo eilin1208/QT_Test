@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     ExtActionContainer::refreshShortcutTranslations();
 
     IconManager::getInstance()->init();
-    SetStyle(":/css/qss/black.css");
+    //SetStyle(":/css/qss/black.css");
     MAINWINDOW->show();
    // MainWindow *w= new MainWindow();
    // w->show();
